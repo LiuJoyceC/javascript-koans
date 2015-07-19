@@ -3,15 +3,23 @@ describe("About Arrays", function() {
   //We shall contemplate truth by testing reality, via spec expectations.  
   it("should create arrays", function() {
     var emptyArray = [];
+    FILL_ME_IN = "object";
     expect(typeof(emptyArray)).toBe(FILL_ME_IN); //A mistake? - http:javascript.crockford.com/remedial.html
+    FILL_ME_IN = 0;
     expect(emptyArray.length).toBe(FILL_ME_IN);
 
     var multiTypeArray = [0, 1, "two", function () { return 3; }, {value1: 4, value2: 5}, [6, 7]];
+    FILL_ME_IN = 0;
     expect(multiTypeArray[0]).toBe(FILL_ME_IN);
+    FILL_ME_IN = "two";
     expect(multiTypeArray[2]).toBe(FILL_ME_IN);
+    FILL_ME_IN = 3;
     expect(multiTypeArray[3]()).toBe(FILL_ME_IN);
+    FILL_ME_IN = 4;
     expect(multiTypeArray[4].value1).toBe(FILL_ME_IN);
+    FILL_ME_IN = 5;
     expect(multiTypeArray[4]["value2"]).toBe(FILL_ME_IN);
+    FILL_ME_IN = 6;
     expect(multiTypeArray[5][0]).toBe(FILL_ME_IN);
   });
 
@@ -23,9 +31,11 @@ describe("About Arrays", function() {
     expect(array).toEqual([1]);
     
     array[1] = 2;
+    FILL_ME_IN = 2;
     expect(array).toEqual([1, FILL_ME_IN]);
     
     array.push(3);
+    FILL_ME_IN = [1,2,3]
     expect(array).toEqual(FILL_ME_IN);
   });
 
