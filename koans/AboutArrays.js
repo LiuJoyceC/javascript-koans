@@ -42,26 +42,37 @@ describe("About Arrays", function() {
   it("should understand array length", function () {
     var fourNumberArray = [1, 2, 3, 4];
 
+    FILL_ME_IN = 4;
     expect(fourNumberArray.length).toBe(FILL_ME_IN);
     fourNumberArray.push(5, 6);
+    FILL_ME_IN = 6;
     expect(fourNumberArray.length).toBe(FILL_ME_IN);
 
     var tenEmptyElementArray = new Array(10); 
+    FILL_ME_IN = 10;
     expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
 
     tenEmptyElementArray.length = 5;
+    FILL_ME_IN = 5;
     expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
   });
 
   it("should slice arrays", function () {
     var array = ["peanut", "butter", "and", "jelly"];
     
+    FILL_ME_IN = ["peanut"];
     expect(array.slice(0, 1)).toEqual(FILL_ME_IN);
+    FILL_ME_IN = ["peanut","butter"];
     expect(array.slice(0, 2)).toEqual(FILL_ME_IN);
+    FILL_ME_IN = [];
     expect(array.slice(2, 2)).toEqual(FILL_ME_IN);
+    FILL_ME_IN = ["and","jelly"];
     expect(array.slice(2, 20)).toEqual(FILL_ME_IN);
+    FILL_ME_IN = [];
     expect(array.slice(3, 0)).toEqual(FILL_ME_IN);
+    FILL_ME_IN = ["jelly"];
     expect(array.slice(3, 100)).toEqual(FILL_ME_IN);
+    FILL_ME_IN = [];
     expect(array.slice(5, 1)).toEqual(FILL_ME_IN);
   });
 
