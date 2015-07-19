@@ -83,14 +83,17 @@ describe("About Arrays", function() {
       refArray[1] = "changed in function";
     }
     passedByReference(array);
+    FILL_ME_IN = "changed in function";
     expect(array[1]).toBe(FILL_ME_IN);
 
     var assignedArray = array;
     assignedArray[5] = "changed in assignedArray";
+    FILL_ME_IN = "changed in assignedArray";
     expect(array[5]).toBe(FILL_ME_IN);
 
     var copyOfArray = array.slice();
     copyOfArray[3] = "changed in copyOfArray";
+    FILL_ME_IN = "three";
     expect(array[3]).toBe(FILL_ME_IN);
   });
 
@@ -98,10 +101,13 @@ describe("About Arrays", function() {
     var array = [1, 2];
     array.push(3);
 
+    FILL_ME_IN = [1,2,3]
     expect(array).toEqual(FILL_ME_IN);
     
     var poppedValue = array.pop();
+    FILL_ME_IN = 3;
     expect(poppedValue).toBe(FILL_ME_IN);
+    FILL_ME_IN = [1,2];
     expect(array).toEqual(FILL_ME_IN);
   });
 
@@ -109,10 +115,13 @@ describe("About Arrays", function() {
     var array = [1, 2];
 
     array.unshift(3);
+    FILL_ME_IN = [3,1,2];
     expect(array).toEqual(FILL_ME_IN);
     
     var shiftedValue = array.shift();
+    FILL_ME_IN = 3;
     expect(shiftedValue).toEqual(FILL_ME_IN);
+    FILL_ME_IN = [1,2];
     expect(array).toEqual(FILL_ME_IN);
   });  
 });
