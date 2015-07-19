@@ -6,6 +6,7 @@ describe("About Functions", function() {
       return a + b;
     }
     
+    FILL_ME_IN = 3;
     expect(add(1, 2)).toBe(FILL_ME_IN);
   });
 
@@ -21,8 +22,11 @@ describe("About Functions", function() {
       return message;
     }
     
+    FILL_ME_IN = "Outer";
     expect(getMessage()).toBe(FILL_ME_IN);
+    FILL_ME_IN = "Inner";
     expect(overrideMessage()).toBe(FILL_ME_IN);
+    FILL_ME_IN = "Outer";
     expect(message).toBe(FILL_ME_IN);
   });
 
@@ -35,6 +39,7 @@ describe("About Functions", function() {
       }
       return childfunction();
     }
+    FILL_ME_IN = "local";
     expect(parentfunction()).toBe(FILL_ME_IN);
   });
 
@@ -49,6 +54,7 @@ describe("About Functions", function() {
     var increaseBy3 = makeIncreaseByFunction(3);
     var increaseBy5 = makeIncreaseByFunction(5);
     
+    FILL_ME_IN = 28;
     expect(increaseBy3(10) + increaseBy5(10)).toBe(FILL_ME_IN);
   });
 
