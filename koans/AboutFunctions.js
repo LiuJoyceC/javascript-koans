@@ -64,12 +64,14 @@ describe("About Functions", function() {
       return firstArg;
     }
     
+    FILL_ME_IN = "first";
     expect(returnFirstArg("first", "second", "third")).toBe(FILL_ME_IN);
     
     function returnSecondArg(firstArg, secondArg) {
       return secondArg;
     }
     
+    FILL_ME_IN = undefined;
     expect(returnSecondArg("only give first arg")).toBe(FILL_ME_IN);
     
     function returnAllArgs() {
@@ -80,6 +82,7 @@ describe("About Functions", function() {
       return argsArray.join(",");
     }
     
+    FILL_ME_IN = "first,second,third";
     expect(returnAllArgs("first", "second", "third")).toBe(FILL_ME_IN);
   });
 
@@ -94,21 +97,25 @@ describe("About Functions", function() {
     };
     
     var praiseSinger = { givePraise: appendRules };
+    FILL_ME_IN = "John rules!";
     expect(praiseSinger.givePraise("John")).toBe(FILL_ME_IN);
     
     praiseSinger.givePraise = appendDoubleRules;
+    FILL_ME_IN = "Mary totally rules!";
     expect(praiseSinger.givePraise("Mary")).toBe(FILL_ME_IN);
       
   });
 
   it("should use function body as a string", function () {
     var add = new Function("a", "b", "return a + b;");
+    FILL_ME_IN = 3;
     expect(add(1, 2)).toBe(FILL_ME_IN);
      
     var multiply = function (a, b) {
       //An internal comment
       return a * b;
     };
+    FILL_ME_IN = 'function (a, b) {\n      //An internal comment\n      return a * b;\n    }';
     expect(multiply.toString()).toBe(FILL_ME_IN);
   });    
 });
