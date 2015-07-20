@@ -25,19 +25,24 @@ describe("About inheritance", function() {
   });
   
   it("should be able to call a method on the derived object", function() {
+    FILL_ME_IN = "Mmmm soup!";
     expect(this.swedishChef.cook()).toEqual(FILL_ME_IN);
   });
   
   it("should be able to call a method on the base object", function() {
+    FILL_ME_IN = "Everything's cool!";
     expect(this.swedishChef.answerNanny()).toEqual(FILL_ME_IN);
   });
   
   it("should set constructor parameters on the base object", function() {
+    FILL_ME_IN = 2;
     expect(this.swedishChef.age).toEqual(FILL_ME_IN);
+    FILL_ME_IN = "cooking";
     expect(this.swedishChef.hobby).toEqual(FILL_ME_IN);
   });
   
   it("should set constructor parameters on the derived object", function() {
+    FILL_ME_IN = "chillin";
     expect(this.swedishChef.mood).toEqual(FILL_ME_IN);
   });
 });
@@ -71,19 +76,24 @@ describe("About Crockford's inheritance improvement", function() {
   });
   
   it("should be able to call a method on the derived object", function() {
+    FILL_ME_IN = "eat a tire";
     expect(this.gonzo.doTrick()).toEqual(FILL_ME_IN);
   });
   
   it("should be able to call a method on the base object", function() {
+    FILL_ME_IN = "Everything's cool!"
     expect(this.gonzo.answerNanny()).toEqual(FILL_ME_IN);
   });
   
   it("should set constructor parameters on the base object", function() {
+    FILL_ME_IN = 3;
     expect(this.gonzo.age).toEqual(FILL_ME_IN);
+    FILL_ME_IN = "daredevil performer";
     expect(this.gonzo.hobby).toEqual(FILL_ME_IN);
   });
   
   it("should set constructor parameters on the derived object", function() {
+    FILL_ME_IN = "eat a tire";
     expect(this.gonzo.trick).toEqual(FILL_ME_IN);
   });
 });
