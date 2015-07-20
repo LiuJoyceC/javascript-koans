@@ -32,6 +32,7 @@ describe("About Applying What We Have Learnt", function() {
         }
     }
 
+    FILL_ME_IN = 1;
     expect(productsICanEat.length).toBe(FILL_ME_IN);
   });
 
@@ -40,7 +41,12 @@ describe("About Applying What We Have Learnt", function() {
       var productsICanEat = [];
 
       /* solve using filter() & all() / any() */
+      productsICanEat = _(products).filter(function(product){
+        return !_(product.ingredients).any(function(ingredient){return ingredient == "mushrooms";}) && !product.containsNuts;
+      });
+      /* end */
 
+      FILL_ME_IN = 1;
       expect(productsICanEat.length).toBe(FILL_ME_IN);
   });
 
@@ -55,12 +61,19 @@ describe("About Applying What We Have Learnt", function() {
       }
     }
     
+    FILL_ME_IN = 233168;
     expect(sum).toBe(FILL_ME_IN);
   });
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
-    var sum = FILL_ME_IN;    /* try chaining range() and reduce() */
+    var sum = FILL_ME_IN; //Not sure what this line is for?
+
+    /* try chaining range() and reduce() */
+    FILL_ME_IN = _(_.range(1000)).reduce(function(sum,number) {
+      return sum + ((number % 3 === 0 || number % 5 === 0) ? number : 0);
+    }, 0);
+    /* end */
 
     expect(233168).toBe(FILL_ME_IN);
   });
