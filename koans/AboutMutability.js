@@ -4,6 +4,7 @@ describe("About Mutability", function() {
     var aPerson = {firstname: "John", lastname: "Smith" };
     aPerson.firstname = "Alan";
     
+    FILL_ME_IN = "Alan";
     expect(aPerson.firstname).toBe(FILL_ME_IN);
   });
 
@@ -16,6 +17,7 @@ describe("About Mutability", function() {
     var aPerson = new Person ("John", "Smith");
     aPerson.firstname = "Alan";
     
+    FILL_ME_IN = "Alan";
     expect(aPerson.firstname).toBe(FILL_ME_IN);
   });
 
@@ -30,12 +32,14 @@ describe("About Mutability", function() {
     };
     
     var aPerson = new Person ("John", "Smith");
+    FILL_ME_IN = "John Smith";
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
     
     aPerson.getFullName = function () {
       return this.lastname + ", " + this.firstname;
     };
     
+    FILL_ME_IN = "Smith, John";
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
   });
 
@@ -54,14 +58,18 @@ describe("About Mutability", function() {
     aPerson.lastname = "Andrews";
     aPerson.fullName = "Penny Andrews";
     
+    FILL_ME_IN = "John";
     expect(aPerson.getFirstName()).toBe(FILL_ME_IN);
+    FILL_ME_IN = "Smith";
     expect(aPerson.getLastName()).toBe(FILL_ME_IN);
+    FILL_ME_IN = "John Smith";
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
 
     aPerson.getFullName = function () {
       return aPerson.lastname + ", " + aPerson.firstname;
     };
     
+    FILL_ME_IN = "Andrews, Penny";
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
   });
 
