@@ -66,7 +66,9 @@ describe("About Higher Order Functions", function () {
 
     var isEven = function(x) { return x % 2 === 0 };
 
+    FILL_ME_IN = true;
     expect(_(onlyEven).all(isEven)).toBe(FILL_ME_IN);
+    FILL_ME_IN = false;
     expect(_(mixedBag).all(isEven)).toBe(FILL_ME_IN);
   });
     
@@ -76,17 +78,23 @@ describe("About Higher Order Functions", function () {
 
     var isEven = function(x) { return x % 2 === 0 };
 
+    FILL_ME_IN = true;
     expect(_(onlyEven).any(isEven)).toBe(FILL_ME_IN);
+    FILL_ME_IN = true;
     expect(_(mixedBag).any(isEven)).toBe(FILL_ME_IN);
   });
 
   it("should use range to generate an array", function() {
+    FILL_ME_IN = [0,1,2];
     expect(_.range(3)).toEqual(FILL_ME_IN);
+    FILL_ME_IN = [1,2,3];
     expect(_.range(1, 4)).toEqual(FILL_ME_IN);
+    FILL_ME_IN = [0,-1,-2,-3];
     expect(_.range(0, -4, -1)).toEqual(FILL_ME_IN);
   });
 
   it("should use flatten to make nested arrays easy to work with", function() {
+    FILL_ME_IN = [1,2,3,4];
     expect(_([ [1, 2], [3, 4] ]).flatten()).toEqual(FILL_ME_IN);
   });
 
@@ -97,6 +105,7 @@ describe("About Higher Order Functions", function () {
                      .reduce(function (sum, x) { return sum + x })
                      .value();
 
+    FILL_ME_IN = 6;
     expect(result).toEqual(FILL_ME_IN);
   });
 
