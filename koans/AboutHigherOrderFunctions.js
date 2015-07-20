@@ -11,8 +11,11 @@ describe("About Higher Order Functions", function () {
     var numbers = [1,2,3];
     var odd = _(numbers).filter(function (x) { return x % 2 !== 0 });
     
+    FILL_ME_IN = [1,3];
     expect(odd).toEqual(FILL_ME_IN);
+    FILL_ME_IN = 2;
     expect(odd.length).toBe(FILL_ME_IN);
+    FILL_ME_IN = 3;
     expect(numbers.length).toBe(FILL_ME_IN);
   });
     
@@ -20,7 +23,9 @@ describe("About Higher Order Functions", function () {
     var numbers = [1, 2, 3];
     var numbersPlus1 = _(numbers).map(function(x) { return x + 1 });
     
+    FILL_ME_IN = [2,3,4];
     expect(numbersPlus1).toEqual(FILL_ME_IN);
+    FILL_ME_IN = [1,2,3];
     expect(numbers).toEqual(FILL_ME_IN);
   });
     
@@ -34,7 +39,9 @@ describe("About Higher Order Functions", function () {
       /* initial */ 0
     );
     
+    FILL_ME_IN = 6;
     expect(reduction).toBe(FILL_ME_IN);
+    FILL_ME_IN = [1,2,3];
     expect(numbers).toEqual(FILL_ME_IN);
   });
     
@@ -47,7 +54,9 @@ describe("About Higher Order Functions", function () {
 
     _(numbers).forEach(isEven);
     
+    FILL_ME_IN = "falsetruefalse";
     expect(msg).toEqual(FILL_ME_IN);
+    FILL_ME_IN = [1,2,3];
     expect(numbers).toEqual(FILL_ME_IN);
   });
     
